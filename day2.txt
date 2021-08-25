@@ -1,0 +1,32 @@
+import random
+
+a = int(random.randint(1,100))#随机产生1~100以内的数
+i = 0
+b = 2000
+while 1:
+                i = i + 1
+                num = int(input("请输入:"))
+                print(a)
+                if num > a:
+                        print("过大")
+                        b= b-200
+                        print(b)
+                elif num < a:
+                        print("过小")
+                        b= b- 2005
+
+                        print(b)
+                elif num == a:
+
+                        print("恭喜你，猜中了！猜了",i,"次")
+                        b = b + 5000
+                        print(b)
+                        break
+                if b == 0:
+                    print("输入Y/N继续/退出")
+                    coun=input().upper()
+
+                    if coun == "Y":
+                        b = 2000
+                    else:
+                        break
